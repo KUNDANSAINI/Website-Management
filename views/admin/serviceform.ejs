@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+ <%-include('../../partials/admin/head.ejs')%>
+<body>
+            <%-include('../../partials/admin/header.ejs')%>
+
+            <section id="mid">
+                <div class="container">
+                    <div class="row">
+                        <%-include('../../partials/admin/left.ejs')%>
+                        <div class="col-md-9">
+                            <h2>Services Form</h2>
+                            <%if(message!=''){%>
+                            <div class="alert alert-<%=color%>"><%=message%></div>
+                            <%}%>
+                            <form action="" method="post" enctype="multipart/form-data">
+                                <label for="">Title</label>
+                                <input type="text" name="stitle" id="" class="form-control">
+                                <label for="">Decriptions</label>
+                                <input type="text" name="tdecs" id="" class="form-control">
+                                <label for="">More Details</label>
+                                <textarea name="smdetails" id="" class="form-control"></textarea>
+                                <label for="">Image Upload</label>
+                                <input type="file" name="img" id="" class="form-control">
+                                <button type="submit" class="form-control btn btn-primary mt-2">Add Services</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+</body>
+</html>

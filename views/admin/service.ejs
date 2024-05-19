@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+ <%-include('../../partials/admin/head.ejs')%>
+<body>
+            <%-include('../../partials/admin/header.ejs')%>
+
+            <section id="mid">
+                <div class="container">
+                    <div class="row">
+                        <%-include('../../partials/admin/left.ejs')%>
+                        <div class="col-md-9">
+                            <h2>Service Mangement</h2>
+                            <%if(message!='mess' && message!='hit' && message!='hit1'){%>
+                            <div class="alert alert-success" id="color"><%=message%></div>
+                            <%}%>
+                            <table class="table table-hover">
+                                <tr>
+                                    <td>Totel Service: <%=totelService%></td>
+                                    <td>Published: <%=Published%></td>
+                                    <td>Unpublished: <%=Unpublished%></td>
+                                </tr>
+                            </table>
+                            <a href="/admin/serviceform"><button class="form-control btn btn-primary">Add More Services</button></a>
+                            <table class="table table-hover">
+                                <tr>
+                                    <th>S.NO.</th>
+                                    <th>IMAGE</th>
+                                    <th>TITLE</th>
+                                    <th>DECRICPTION</th>
+                                    <th>MORE DETAILS</th>
+                                    <th>POSTED DATE <br>
+                                        <a href="/admin/service/hit"><i class="bi bi-arrow-up"></i></a>
+                                        <a href="/admin/service/hit1"><i class="bi bi-arrow-down"></i></a>
+                                    </th>
+                                    <th>STATUS</th>
+                                    <th>DELETE</th>
+                                </tr>
+                                <%sdata.forEach((value,key)=>{%>
+                                <tr>
+                                    <td><%=key+1%></td>
+                                    <td><img src="/storage/<%=value.img%>" alt=""></td>
+                                    <td><%=value.title%></td>
+                                    <td><%=value.decs%></td>
+                                    <td><%=value.mdetails%></td>
+                                    <td><%=value.postedDate%></td>
+                                    <%if(value.status=='Published'){%>
+                                    <td><a href="/admin/statusupdate/<%=value.id%>"><button class="btn btn-success"><%=value.status%></button></a></td>
+                                    <%}else{%>
+                                    <td><a href="/admin/statusupdate/<%=value.id%>"><button class="btn btn-danger"><%=value.status%></button></a></td>
+                                    <%}%>
+                                    <td><a href="/admin/delete/<%=value.id%>"><p><i class="bi bi-trash3"></i></p></a></td>
+                                </tr>
+                            <%})%>
+
+                            <%if(!sdata.length){%>
+                            <tr>
+                                <tr>
+                                    <td colspan="7"><h4>No Record Found</h4></td>
+                                </tr>
+                            </tr>
+                            <%}%>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+</body>
+</html>

@@ -1,0 +1,167 @@
+#message{
+    height: 500px;
+    display: flex;
+    align-items: center;
+}
+#testi h2{
+    text-align: center;
+}
+#mbanner h2{
+text-align: center;
+font-family: Kenia;
+font-size: 40px;
+}
+#mbanner p{
+    text-align: justify;
+    font-family: Viga;
+}
+#header{
+    background: rgb(237, 180, 180);
+}
+#header li a{
+    color: black;
+    font-family: Viga;
+    transition-property: color;
+    transition-duration: 0.5s;
+}
+#header li a:hover{
+    color: rgb(212, 206, 206);
+}
+#header .navbar-toggler{
+    border-color: black;
+}
+#header i{
+    color: black;
+}
+#header img{
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: 3px 3px black;
+}
+#header .container-fluid{
+    padding-left: 0px;
+}
+#banner {
+    background: rgb(193, 165, 165);
+    padding: 40px;
+}
+#banner img{
+    width: 150px;
+    margin-bottom: 40px;
+}
+#banner h2{
+    text-align: center;
+    font-family: Kenia;
+    font-size: 40px;
+}
+#banner p{
+    text-align: justify;
+    font-family: Viga;
+}
+#banner button{
+    width: 200px;
+    margin: 20px 0px;
+}
+#service{
+    padding: 20px 0px;
+}
+#service h2{
+    text-align: center;
+    font-family: Kenia;
+    font-size: 40px;
+    margin: 30px 0px;
+}
+#service img{
+     width: 100px;
+     border-radius: 50%;
+}
+#service h4{
+    text-align: center;
+    font-family: Kenia;
+    margin: 20px 0px;
+}
+#service p{
+    text-align: justify;
+    font-family: Viga;
+}
+#service button{
+    font-family: Viga;
+    margin: 20px 0px;
+}
+#testi {
+    padding-bottom: 40px;
+}
+#testi h2{
+    text-align: center;
+    font-family: Kenia;
+    font-size: 40px;
+    margin: 30px 0px;
+}
+#testi img{
+    width: 100px;
+}
+#testi p{
+    text-align: justify;
+    margin-top: 20px;
+    font-family: Viga;
+}
+#testi h4{
+    font-family: Kenia;
+    margin-bottom: 30px;
+    text-align: center;
+}
+#card {
+    padding-bottom: 20px;
+}
+#card .card{
+    border: 0px solid white;
+}
+#card img{
+    width: 100px;
+}
+#card h5{
+    text-align: center;
+    font-family: Kenia;
+}
+#card p{
+    text-align: justify;
+    font-family: Viga;
+}
+#footer{
+    background: rgb(237, 180, 180);
+    padding-top: 20px;
+}
+#footer h2{
+    font-family: Kenia;
+    text-align: center;
+    margin: 20px 0px;
+}
+#footer textarea{
+    margin: 5px 0px;
+}
+#footer tr {
+    display: flex;
+}
+#footer tr td i{
+    font-size: 25px;
+}
+#footer i{
+    font-size: 20px;
+}
+#footer img{
+    border-radius: 50%;
+    width: 80px;
+    margin-bottom: 30px;
+}
+#footer p{
+    font-family: Viga;
+    text-align: justify;
+    margin-top: 10px;
+}
+#footer p i{
+    font-size: 35px;
+    margin-right: 8px;
+}
+#footer button{
+    margin-bottom: 30px;
+}

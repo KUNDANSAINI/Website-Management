@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+ <%-include('../../partials/admin/head.ejs')%>
+<body>
+            <%-include('../../partials/admin/header.ejs')%>
+
+            <section id="mid">
+                <div class="container">
+                    <div class="row">
+                        <%-include('../../partials/admin/left.ejs')%>
+                        <div class="col-md-9">
+                            <h2>Banner Management</h2>
+                            <table class="table table-hover">
+                                <tr>
+                                    <th>Banner Title</th>
+                                    <th>Banner Decription</th>
+                                    <th>Banner Image</th>
+                                    <th>Banner More Details</th>
+                                    <th>Banner Update</th>
+                                </tr>
+                                <tr>
+                                    <td><%=data.title%></td>
+                                    <td><%=data.decs%></td>
+                                    <td><img src="/storage/<%=data.img%>" alt=""></td>
+                                    <td><%=data.moredes%></td>
+                                    <td><a href="/admin/bannerupdate/<%=data.id%>"><p><i class="bi bi-pencil"></i></p></a></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+</body>
+</html>

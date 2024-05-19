@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+ <%-include('../../partials/admin/head.ejs')%>
+<body>
+            <%-include('../../partials/admin/header.ejs')%>
+
+            <section id="mid">
+                <div class="container">
+                    <div class="row">
+                        <%-include('../../partials/admin/left.ejs')%>
+                        <div class="col-md-9">
+                            <h2>Query Management</h2>
+                            <%if(message!=='message'){%>
+                            <div class="alert alert-danger"><%=message%></div>
+                            <%}%>
+                            <table class="table table-hover">
+                                <tr>
+                                    <th>S.No.</th>
+                                    <th>EMAIL</th>
+                                    <th>QUERY</th>
+                                    <th>REPLY</th>
+                                    <th>DELETE</th>
+                                </tr>
+                                <%querydata.forEach((value,key)=>{%>
+                                    <tr>
+                                        <td><%=key+1%></td>
+                                        <td><%=value.email%></td>
+                                        <td><%=value.query%></td>
+                                        <%if(value.status=='Replied'){%>
+                                        <td><a href="/admin/queryreply/<%=value.id%>"><button disabled><%=value.status%></button></a></td>
+                                        <%}else{%>
+                                        <td><a href="/admin/queryreply/<%=value.id%>"><button class="btn btn-primary"><%=value.status%></button></a></td>
+                                        <%}%>
+                                        <td><a href="/admin/querydelete/<%=value.id%>"><button class="btn btn-primary">Delete</button></a></td>
+                                    </tr>
+                                <%})%>
+
+                                <%if(!querydata.length){%>
+                                <tr>
+                                    <tr>
+                                        <td colspan="5"><h4>No Record Found</h4></td>
+                                    </tr>
+                                </tr>
+                                <%}%>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+</body>
+</html>

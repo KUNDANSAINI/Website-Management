@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+ <%-include('../../partials/admin/head.ejs')%>
+<body>
+            <%-include('../../partials/admin/header.ejs')%>
+
+            <section id="mid">
+                <div class="container">
+                    <div class="row">
+                        <%-include('../../partials/admin/left.ejs')%>
+                        <div class="col-md-9">
+                            <h2>Banner Update</h2>
+                            <%if(error!=''){%>
+                            <div class="alert alert-<%=color%>" id="color"><%=error%></div>
+                            <%}%>
+                            <form action="" method="post" enctype="multipart/form-data">
+                                <label for="">Banner Title</label>
+                                <input type="text" name="btitle" id="" class="form-control" value="<%=data.title%>">
+                                <label for="">Banner Decription</label>
+                                <input type="text" name="bdecs" id="" class="form-control" value="<%=data.decs%>">
+                                <label for="">Banner More Details</label>
+                                <textarea name="bmdetails" id="" class="form-control"><%=data.moredes%></textarea>
+                                <label for="">Image</label>
+                                <input type="file" name="img" id="" class="form-control">
+                                <button type="submit" class="form-control btn btn-success mt-2">Banner Update</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+</body>
+</html>

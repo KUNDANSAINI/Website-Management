@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%-include('../partials/head.ejs')%>
+
+<body>
+  <!-- Header start from here  -->
+  <%-include('../partials/header.ejs')%> 
+  <!-- Header end from here  -->
+
+
+  <!-- banner start from here  -->
+  <section id="banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 justify-contant-center text-center">
+          <h2><%=bannerdata.title%></h2>
+          <p><%=bannerdata.decs%></p>
+          <a href="/moredetails"><button class="btn btn-success form-control">More Details</button></a>
+        </div>
+        <div class="col-md-4">
+          <img src="/storage/<%=bannerdata.img%>" alt="Error" class="img-fluid mx-auto d-flex">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- banner end from here  -->
+
+
+  <!-- Services start from here  -->
+  <section id="service">
+    <div class="container">
+      <div class="row">
+        <h2>Services</h2>
+        <%servicedata.forEach((value,key)=>{%>
+          <div class="col-md-3">
+            <img src="/storage/<%=value.img%>" alt="Error" class="img-fluid d-flex mx-auto">
+            <h4><%=value.title%></h4>
+            <p><%=value.decs%></p>
+            <a href="/servicemdetails/<%=value.id%>"><button class="btn btn-success form-control">View More...</button></a>
+          </div> 
+       <%})%>
+      </div>
+    </div>
+  </section>
+  <!-- Services end from here  -->
+
+
+  <!-- testinomils start from here  -->
+  <section id="testi">
+    <div class="container">
+      <div class="row">
+        <h2>Testinomils</h2>
+        <%testidata.forEach((value,key)=>{%>
+          <div class="col-md-3">
+            <img src="/storage/<%=value.img%>" alt="" class="img-fluid d-flex mx-auto">
+            <p><i class="bi bi-quote"></i><%=value.decs%><i class="bi bi-quote"></i></p>
+            <h4><%=value.user%></h4>
+          </div>
+        <%})%>
+      </div>
+    </div>
+  </section>
+  <!-- testinomils end from here  -->
+
+
+  <!-- card start from here  -->
+  <section id="card">
+     <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <!-- alert code  -->
+          <div class="alert alert-danger">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, ea.</p>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="media/580b57fcd9996e24bc43c53e.png" class="card-img-top img-fluid mx-auto" alt="Error">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary form-control">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <!-- alert code  -->
+          <div class="alert alert-danger">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, ea.</p>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="media/580b57fcd9996e24bc43c53e.png" class="card-img-top img-fluid mx-auto" alt="Error">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary form-control">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <!-- alert code  -->
+          <div class="alert alert-danger">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, ea.</p>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="media/580b57fcd9996e24bc43c53e.png" class="card-img-top img-fluid mx-auto" alt="Error">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary form-control">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <!-- alert code  -->
+          <div class="alert alert-danger">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, ea.</p>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="media/580b57fcd9996e24bc43c53e.png" class="card-img-top img-fluid mx-auto" alt="Error">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary form-control">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+     </div>
+  </section>
+  <!-- card end from here  -->
+
+
+  <!-- Footer start from here  -->
+  <%-include('../partials/footer.ejs')%> 
+  <!-- Footer end from here  -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
